@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #faf7ef;
+  --foreground: #191717;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--foreground);
+  background:
+    linear-gradient(135deg, rgba(220, 238, 229, 0.7), transparent 28rem),
+    linear-gradient(315deg, rgba(239, 183, 165, 0.45), transparent 24rem),
+    var(--background);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.math-block .katex {
+  font-size: 2rem;
+  max-width: 100%;
+  white-space: normal;
+}
+
+.math-block {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding-bottom: 0.15rem;
+}
+
+.math-block .katex-display {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.math-block .katex-html {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.math-inline .katex {
+  font-size: 1.08em;
+}
+
+.problem-math .katex {
+  font-size: 2.25rem;
+}
+
+.problem-math {
+  display: flex;
+  min-height: 5.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.route-math .katex {
+  font-size: 1.7rem;
+}
+
+.route-math .katex-display,
+.problem-math .katex-display {
+  margin: 0.25rem 0;
+}
+
+@media (max-width: 640px) {
+  .problem-math {
+    min-height: 5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .problem-math .katex {
+    font-size: 1.35rem;
+  }
+
+  .route-math .katex,
+  .math-block .katex {
+    font-size: 1.3rem;
+  }
+}
+
+::selection {
+  color: #191717;
+  background: #efb7a5;
+}
